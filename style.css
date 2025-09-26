@@ -1,0 +1,102 @@
+:root {
+  --intractable: #f00;
+  --sustainable: #0f0;
+  --selection: #00f;
+  --focus: #ff0;
+  --bg: #000;
+  --text: #fff;
+  --font-scale: 1;
+  --font: monospace;
+}
+
+@font-face {
+  font-family: "Terminal Gothic";
+  src: url("/resources/fonts/TerminalGothic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Ink Snare";
+  src: url("/resources/fonts/InkSnare.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Tenebris";
+  src: url("/resources/fonts/Tenebris.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Skeletext";
+  src: url("/resources/fonts/Skeletext.ttf") format("truetype");
+}
+
+html, body {
+  background-color: var(--bg);
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: clamp(
+    calc(8px * var(--font-scale)),
+    calc((100vw / 56) * var(--font-scale)),
+    calc(20px * var(--font-scale)));
+  line-height: 1;
+  color: var(--text);
+  text-decoration: none;
+  font-family: var(--font);
+  white-space: pre;
+}
+
+::selection {
+  background-color: var(--selection);
+  color: var(--text);
+}
+
+a {
+  color: var(--intractable);
+  cursor: pointer;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  width: 100%;
+}
+
+.page {
+  display: block;
+  white-space: pre;
+}
+
+pre {
+  position: relative;
+  left: 0;
+  padding: 0 calc((100vw - 80ch) / 2);
+  overflow-x: auto;
+  overflow-y: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.pre::-webkit-scrollbar { display: none; }
+
+.wrap {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.sust {
+  color: var(--sustainable);
+}
+
+#font-select-container {
+  display: block;
+}
+
+*:focus {
+  color: var(--focus);
+  outline: none;
+}
