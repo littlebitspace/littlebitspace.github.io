@@ -5,8 +5,8 @@ window.addEventListener('load', () => {
     let totalBytes = 0;
     const resources = performance.getEntriesByType('resource');
     resources.forEach(res => {
-      totalBytes += res.transferSize || 0;
-    });
+      //totalBytes += res.transferSize || 0; // this calculates transfer size, which is 0 if cached
+      totalBytes += res.decodedBodySize || res.encodedBodySize || 0; // this calculates actual resource size
     const kb = Math.round(totalBytes / 1024);
 
     const ENERGY_PER_GB = 0.81; // kWh/GB
