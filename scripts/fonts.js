@@ -36,7 +36,12 @@ function formatFontName(name, width = FONT_WIDTH) {
 }
 
 // add font to elements
-function applyFont(fontName) { document.documentElement.style.setProperty('--font', `"${fontName}"`); }
+function applyFont(fontName) {
+  if (fontName === fonts[0])
+    document.documentElement.style.setProperty('--font', `${fontName}`);
+  else
+    document.documentElement.style.setProperty('--font', `"${fontName}"`);
+}
 
 // Create options dynamically
 function createFontOptions() {
