@@ -22,7 +22,7 @@ sliderLinks.forEach(link => {
 
 const fontDropdown = document.getElementById('font-select-dropdown');
 const fontDropdownContainer = document.getElementById('font-select-container');
-const fonts = ['monospace', 'Terminal Gothic', 'Ink Snare', 'Tenebris', 'Skeletext'];
+const fonts = ['monospace', 'Terminal Gothic', 'Ink Snare', 'Tenebris', 'Skeletext', 'Gairaigo'];
 let currentFont = fonts[0];
 const FONT_WIDTH = 16;
 
