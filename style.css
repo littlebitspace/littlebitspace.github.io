@@ -29,6 +29,11 @@
   src: url("/resources/fonts/Skeletext.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Gairaigo";
+  src: url("/resources/fonts/Gairaigo.ttf") format("truetype");
+}
+
 html, body {
   background-color: var(--bg);
   overflow-x: hidden;
