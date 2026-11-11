@@ -63,6 +63,20 @@ const socialDcTx = [
   "b.s8s,d8"
 ];
 
+const tarotEl = Array.from(document.getElementsByClassName("tarot"));
+const tarotTx = [
+".--------.",
+"| ,+O -. |",
+"| Y,,. * |:.",
+"| , `\"\"s |||",
+"| *,,. ' |||",
+"| r `'\"b |||",
+"| `- O+' |||",
+"`--------'||",
+" !________!|",
+  "`--------'"
+];
+
 /* RUN FUNCTIONS */
 
 addHoverChange(door2e, doorOpent);
@@ -72,4 +86,5 @@ addHoverChange(socialTwEl, socialTwTx);
 addHoverChange(socialMdEl, socialMdTx);
 addHoverChange(socialBsEl, socialBsTx);
 addHoverChange(socialDcEl, socialDcTx);
+addHoverChange(tarotEl, tarotTx);
 
