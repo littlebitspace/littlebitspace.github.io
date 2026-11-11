@@ -22,9 +22,9 @@ window.addEventListener('load', () => {
       const textContent = `Load: ${kb}kB | ${loadTime}ms | <span class="sust">~${(gramsCO2 * 1000).toFixed(1)}mg CO2</span>`;
       el.innerHTML = ' '.repeat(40 - textContent.length + 26) + textContent;
     }
-  }, 1);
+    }, 1);
+  });
 });
 
 /* RUN FUNCTIONS */
-
 document.getElementById("copyright-year").innerText = new Date().getFullYear();
